@@ -1,0 +1,135 @@
+/* StudentSanction.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {  
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ececec, #cecbcb);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    background: #737374;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.table-container {
+    max-height: 300px; /* Sets fixed height for scrollable table */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    white-space: nowrap; /* Keeps content on one line */
+}
+
+th {
+    background-color: #525252;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #eaf3ff;
+}
+
+td {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Scrollbar styling */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #737374;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #ececec;
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #737374;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #f1f1f1;
+    }
+}
+
+/*for admin
+.btn {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+}
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+*/
